@@ -1,0 +1,317 @@
+.heading {
+    background-color: #6c5ce7;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.user_type_container {
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+
+    label {
+        margin-right: 15px;
+        font-size: 16px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    input[type="radio"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #6c5ce7;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="radio"]:checked {
+        border-color: #ff6b6b;
+        background-color: #ff6b6b;
+    }
+
+    input[type="radio"]::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="radio"]:checked::before {
+        background-color: #fff;
+    }
+}
+
+.payment_mode {
+    display: flex;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+
+    label {
+        margin-right: 15px;
+        font-size: 16px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    input[type="radio"] {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 2px solid #6c5ce7;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+    }
+
+    input[type="radio"]:checked {
+        border-color: #ff6b6b;
+        background-color: #ff6b6b;
+    }
+
+    input[type="radio"]::before {
+        content: "";
+        display: block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background-color 0.3s ease;
+    }
+
+    input[type="radio"]:checked::before {
+        background-color: #fff;
+    }
+}
+
+.user_detail {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 10px;
+
+    select {
+        width: 180px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    input {
+        width: 150px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    label {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.2s ease all;
+        color: #999;
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        top: -10px;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .active {
+        top: -10px;
+        font-size: 12px;
+        color: #333;
+    }
+}
+
+.add_product {
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #6c5ce7;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect */
+    button:hover {
+        background-color: #4a40b3;
+    }
+
+}
+
+.received_mount_container {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin-left: 10px;
+
+    input {
+        width: 150px;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    label {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        transition: 0.2s ease all;
+        color: #999;
+    }
+
+    input:focus+label,
+    input:not(:placeholder-shown)+label {
+        top: -10px;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .active {
+        top: -10px;
+        font-size: 12px;
+        color: #333;
+    }
+}
+
+.product_detail_list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+
+    .product_detail {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        .product_detail_wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .product_detail_name {
+            display: flex;
+            flex-direction: row;
+
+            select {
+                width: 180px;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+
+        .product_detail_qty {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            margin-left: 10px;
+
+            input {
+                width: 150px;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            label {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                transition: 0.2s ease all;
+                color: #999;
+            }
+
+            input:focus+label,
+            input:not(:placeholder-shown)+label {
+                top: -10px;
+                font-size: 12px;
+                color: #333;
+            }
+
+            .active {
+                top: -10px;
+                font-size: 12px;
+                color: #333;
+            }
+        }
+
+        .product_detail_unit {
+            display: flex;
+            flex-direction: row;
+
+            select {
+                width: 180px;
+                padding: 10px;
+                font-size: 16px;
+            }
+        }
+
+        .product_detail_price {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            margin-left: 10px;
+
+            input {
+                width: 150px;
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            label {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+                transition: 0.2s ease all;
+                color: #999;
+            }
+
+            input:focus+label,
+            input:not(:placeholder-shown)+label {
+                top: -10px;
+                font-size: 12px;
+                color: #333;
+            }
+
+            .active {
+                top: -10px;
+                font-size: 12px;
+                color: #333;
+            }
+        }
+    }
+}
+
+.mt_20 {
+    margin-top: 20px;
+}
